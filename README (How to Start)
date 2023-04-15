@@ -1,0 +1,20 @@
+Instructions:
+(1) Help the snowman find his home. 
+(2) Dodge the suns and avoid the water. 
+(3) Collect some ice to score good points.
+
+When making this game, vscode was the IDE of choice and using an extension called liveserver also was helpful entirely. Simply, right click 'index.html' and choose 'Open with liveserver'.
+
+The making of this 2D game proved to be a bit of challenging. In the middle of the development process, a new js file named 'p5.sound.js' had to be made. The content was copied from the github file indicated in the official website of the package as well as incorporating the script into the index.html file.
+
+MOst of the components of the game are dynamically created as the character moves further to the left. Since, it is a scrollable world, certain changes for the code had to be set to keep the camera position as intended. The clouds, trees, waterfall, background trees, collectables (Changed from coin to ice) and falling suns are all dynamically created as the character progresses from left to right. The basis for a new component in one of these types would be the character's x-position travelled so far. 
+
+The enemies for this game are the falling suns. Don't get hit by them as they'll heat you up and don't want you melting down. You lose a life in such an instance. They appear in random in the screen. They go away when they are nearing the bottom. Also, it's best not to go on the cliff as you'll fall and lose a life.
+
+Making the sound for this game proved to be required more effort than needed. The 'loadSound' function wasn't working at first and this was due to the fact that a new file as mentioned prior at the first paragraph has to be integrated first. As such an issue was solved, it was time to pick some free sounds out there. There are three sounds in the game which are Splash, Jump and IceCollect. Splash activated when you fall to your death in the water. Jump as the name suggest sounds up when you jump or press the 'w' button. IceCollect reveals itself when you collect an ice which is the substitute for the coin of the base game.
+
+There are three platforms created as can be seen in the early time of the game. These are static objects unlike the dynamically ones mentioned. They do not appear randomly as you progress in the game. You can modity the platforms list in line 131 and make them appear in the game.
+
+ One of the issues to solve was also the double jump as mentioned in the instructions. This was solved by introducing a variable named 'canJump'. By default, it is set to 'true'. If the characted Jumps, this sets to false thereby preventing any further jumping. This variable needs to be set to true once again for the characted to jump again and this would happen if you are on the ground again or when the variable 'onPlatform' is true indicating you are standing on a platform. Also, the setInterval was used for this to check the game concerning this every 0.5 seconds.
+ 
+ PNG files were also use for the game. The 'loadImage' function was essentail for this as these parts were preloaded before the game starts. The sun, ice and clouds are examples for this. 

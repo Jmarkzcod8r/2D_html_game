@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="p5.js"></script>
+	<script src="p5.sound.js"></script>
+    <script src="sketch.js"></script>
+    <style> body {padding: 0; margin: 0;} </style>
+  </head>
+  <style>
+		#score {
+			position: absolute;
+			top: 10px;
+			left: 120px;
+			font-size: 24px;
+		}
+    #lives {
+			position: absolute;
+			top: 10px; 
+			left: 10px;
+			font-size: 24px;
+		}
+    .cloud {
+			width: 150px;
+			height: 80px;
+			border-radius: 50%;
+			background: white;
+			box-shadow: 0 0 20px 10px white;
+			position: absolute;
+			opacity: 0.7;
+		}
+
+		.cloud:nth-child(2) {
+			top: 50px;
+			left: 100px;
+		}
+
+		.cloud:nth-child(3) {
+			top: 100px;
+			left: 200px;
+		}
+		#Statusboard{
+			/* background-color: red; */
+			color:red;
+			font-size:2em;
+			font-family: Arial, Helvetica, sans-serif;
+			position:absolute;
+			width:1024px;
+			text-align: center;
+			top:4.5em
+			
+		}
+		#playagain{
+			position:absolute;
+			/* right:100; */
+			left:100;
+		}
+		#Restart {
+			position:absolute;
+			color:blue;
+			left:57rem;
+			top:1.8rem;
+		}
+	</style>
+  <body>
+    <div id="game-container">
+		<div id="Statusboard"></div>
+      <!-- <div class="cloud"></div>d -->
+      <!-- <div id="player"></div>
+      <div id="enemy"></div> -->
+      <div id="lives">Lives: 3 </div>
+      <div id="score">Score: 0</div>
+	  <div id="Restart"><button id="Restart_button">Play Again</button></div>
+	  <!-- <button id="playagain">ihasd</button> -->
+    </div>
+    
+  </body>
+</html>
+
